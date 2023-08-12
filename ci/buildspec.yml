@@ -7,12 +7,12 @@ phases:
   build:
     commands:
       - echo Building the Go code...
-      - cd $CODEBUILD_SRC_DIR/golang-app
+      - cd $CODEBUILD_SRC_DIR
       - go build hello.go 
-artifacts:
-  secondary-artifacts:
-    golang_artifacts:
-      base-directory: golang-app
-      files:
-        - hello
+# artifacts:
+#   secondary-artifacts:
+#     golang_artifacts:
+#       base-directory: golang-app
+#       files:
+#         - hello
     
