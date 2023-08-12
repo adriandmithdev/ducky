@@ -9,10 +9,9 @@ phases:
       - echo Building the Go code...
       - cd $CODEBUILD_SRC_DIR
       - go build hello.go 
+
 artifacts:
-  files:
-    - '**/*'
-  base-directory: base_dir
+  files: '**/*'
+  base-directory: $CODEBUILD_SRC_DIR
   name: build-artifact-name
   discard-paths: no
-    
